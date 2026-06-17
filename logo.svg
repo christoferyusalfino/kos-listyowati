@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 72" width="290" height="72" role="img" aria-label="Kos Listyowati">
+  <!-- Latar belakang kuning -->
+  <rect width="290" height="72" rx="10" fill="#F5B800"/>
+
+  <!-- ikon rumah -->
+  <!-- atap (segitiga) -->
+  <polygon points="34,6 7,31 61,31" fill="#1A1A1A"/>
+  <!-- cerobong kecil -->
+  <rect x="44" y="13" width="7" height="10" fill="#1A1A1A"/>
+  <!-- badan rumah -->
+  <rect x="12" y="29" width="44" height="26" fill="#1A1A1A"/>
+  <!-- pintu (cutout kuning) -->
+  <rect x="22" y="38" width="24" height="17" rx="2" fill="#F5B800"/>
+
+  <!-- label KOST -->
+  <text x="34" y="66"
+        text-anchor="middle"
+        font-family="'Arial Narrow', Arial, Helvetica, sans-serif"
+        font-size="7" font-weight="800" letter-spacing="3"
+        fill="#1A1A1A">KOST</text>
+
+  <!-- garis pemisah -->
+  <rect x="71" y="8" width="1.5" height="56" rx="1" fill="#1A1A1A" opacity="0.18"/>
+
+  <!-- teks Listyowati -->
+  <text x="84" y="46"
+        font-family="'Arial Black', 'Arial Bold', Arial, Helvetica, sans-serif"
+        font-size="27" font-weight="900"
+        fill="#1A1A1A">Listyowati</text>
+</svg>

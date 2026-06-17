@@ -49,7 +49,7 @@
       border-bottom: 1px solid var(--border);
       box-shadow: 0 2px 16px rgba(11,28,61,0.07);
     }
-    .logo img { width: 254px; height: 46px; object-fit: contain; object-position: left center; display: block; }
+    .logo img { height: 60px; width: auto; display: block; }
     .nav-links { list-style: none; display: flex; align-items: center; gap: 40px; }
     .nav-links a {
       text-decoration: none; color: var(--dark);
@@ -69,32 +69,31 @@
     /* ─── HERO (150%) ─── */
     .hero {
       max-width: 1300px; margin: 0 auto;
-      padding: 108px 56px 100px;
+      padding: 90px 56px 48px;
       display: grid; grid-template-columns: 1fr 1fr;
-      align-items: center; gap: 80px; min-height: 100vh;
+      align-items: center; gap: 80px;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--primary-light); color: var(--primary);
       border: 1px solid var(--primary-mid); border-radius: 24px;
       padding: 7px 18px; font-size: 16px; font-weight: 700;
-      letter-spacing: .3px; margin-bottom: 28px;
+      letter-spacing: .3px; margin-bottom: 14px;
     }
-    /* 3: Headline diperbesar + tanpa "kota" */
     .hero-title {
-      font-size: 78px; font-weight: 900; line-height: 1.08;
-      letter-spacing: -2px; color: var(--dark); margin-bottom: 28px;
+      font-size: 64px; font-weight: 900; line-height: 1.08;
+      letter-spacing: -2px; color: var(--dark); margin-bottom: 16px;
     }
     .hero-title .hl { color: var(--primary); }
     .hero-desc {
-      font-size: 22px; line-height: 1.78; color: var(--text);
-      max-width: 500px; margin-bottom: 44px;
+      font-size: 20px; line-height: 1.7; color: var(--text);
+      max-width: 500px; margin-bottom: 28px;
     }
-    .hero-buttons { margin-bottom: 60px; }
+    .hero-buttons { margin-bottom: 24px; }
     .btn-chat {
       display: inline-flex; align-items: center; gap: 10px;
       background: var(--green); color: #fff;
-      font-size: 22px; font-weight: 700; padding: 20px 44px;
+      font-size: 20px; font-weight: 700; padding: 16px 40px;
       border-radius: 12px; text-decoration: none;
       box-shadow: 0 4px 20px rgba(37,211,102,.3);
       transition: background .2s, transform .15s, box-shadow .2s;
@@ -104,7 +103,7 @@
     .hero-stats { display: flex; align-items: stretch; }
     .stat-block { padding-right: 44px; }
     .stat-block + .stat-block { border-left: 1px solid var(--border); padding-left: 44px; padding-right: 0; }
-    .stat-num { font-size: 56px; font-weight: 900; color: var(--dark); letter-spacing: -2px; line-height: 1; }
+    .stat-num { font-size: 48px; font-weight: 900; color: var(--dark); letter-spacing: -2px; line-height: 1; }
     .stat-num .accent { color: var(--primary); }
     /* Angka sisa kamar merah */
     .stat-num.sisa { color: #CD1C18; }
@@ -118,7 +117,7 @@
       box-shadow: 0 24px 72px rgba(11,28,61,.16);
       position: relative; background: #eef2f9;
     }
-    .building-frame img { width: 100%; height: 520px; object-fit: cover; display: block; }
+    .building-frame img { width: 100%; height: 440px; object-fit: cover; display: block; }
     .building-ph {
       width: 100%; height: 520px; display: flex; flex-direction: column;
       align-items: center; justify-content: center; gap: 12px;
@@ -215,8 +214,8 @@
 
     /* ─── RESPONSIVE MOBILE ─── */
     @media (max-width: 1024px) {
-      .hero { gap: 48px; padding: 98px 40px 80px; }
-      .hero-title { font-size: 60px; }
+      .hero { gap: 48px; padding: 88px 40px 60px; }
+      .hero-title { font-size: 54px; }
       .sec-heading { font-size: 44px; }
       .sec-wrap { padding: 0 40px; }
     }
@@ -225,11 +224,11 @@
       .navbar { padding: 0 20px; height: 64px; }
       .logo img { width: 180px; height: 33px; }
       .nav-links { display: none; }
-      .nav-cta { font-size: 13px; padding: 10px 16px; }
+      .nav-cta { display: none; }
 
       .hero {
         grid-template-columns: 1fr; min-height: auto;
-        padding: 84px 20px 60px; gap: 40px;
+        padding: 76px 20px 48px; gap: 32px;
       }
       .hero-title { font-size: 42px; letter-spacing: -1px; }
       .hero-desc { font-size: 18px; max-width: 100%; }

@@ -107,6 +107,8 @@
     .stat-block + .stat-block { border-left: 1px solid var(--border); padding-left: 44px; padding-right: 0; }
     .stat-num { font-size: 56px; font-weight: 900; color: var(--dark); letter-spacing: -2px; line-height: 1; }
     .stat-num .accent { color: var(--primary); }
+    /* Angka sisa kamar merah */
+    .stat-num.sisa { color: #CD1C18; }
     .stat-lbl { font-size: 16px; color: var(--muted); font-weight: 500; margin-top: 6px; line-height: 1.5; }
     .stat-date { display: block; font-size: 13px; color: #bbb; margin-top: 3px; }
 
@@ -262,12 +264,15 @@
       .hero-desc { font-size: 16px; }
       .btn-chat { font-size: 16px; padding: 14px 24px; width: 100%; justify-content: center; }
       .fac-grid { grid-template-columns: 1fr; }
-      .hero-stats { flex-direction: column; gap: 20px; }
+      /* Stats tetap sejajar (row) di mobile */
+      .hero-stats { flex-direction: row; gap: 0; }
+      .stat-block { flex: 1; padding-right: 0; padding-left: 0; }
       .stat-block + .stat-block {
-        border-left: none; border-top: 1px solid var(--border);
-        padding-left: 0; padding-top: 20px;
+        border-left: 1px solid var(--border); border-top: none;
+        padding-left: 20px;
       }
-      .stat-num { font-size: 40px; }
+      .stat-num { font-size: 36px; }
+      .stat-lbl { font-size: 13px; }
       .sec-heading { font-size: 28px; }
       .float-card { display: none; }
     }
@@ -308,11 +313,11 @@
 
     <div class="hero-stats">
       <div class="stat-block">
-        <div class="stat-num">8<span class="accent">+</span></div>
-        <div class="stat-lbl">Kamar<br>Tersedia</div>
+        <div class="stat-num">8</div>
+        <div class="stat-lbl">Jumlah Kamar Tersedia</div>
       </div>
       <div class="stat-block">
-        <div class="stat-num" id="sisa-num">0</div>
+        <div class="stat-num sisa" id="sisa-num">0</div>
         <div class="stat-lbl">Sisa Kamar Hari Ini<span class="stat-date" id="tanggal-live"></span></div>
       </div>
     </div>
@@ -401,10 +406,23 @@
 
 <script>
   (function () {
-    const now = new Date();
-    document.getElementById('tanggal-live').textContent =
-      now.toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' });
-    document.getElementById('sisa-num').textContent = '0';
+    const now   = new Date();
+    const label = now.toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' });
+    document.getElementById('tanggal-live').textContent = label;
+
+    /* ─── UPDATE SISA KAMAR SETIAP HARI ───────────────────────────────
+       Tambah atau ubah entri di bawah dengan format 'YYYY-MM-DD': jumlah
+       Contoh: '2026-06-20': 3  →  pada 20 Jun 2026 tampil angka 3
+    ──────────────────────────────────────────────────────────────────── */
+    const sisaPerHari = {
+      '2026-06-17': 0,
+      /* '2026-06-18': 2, */
+      /* '2026-06-19': 1, */
+    };
+
+    const hari = now.toISOString().split('T')[0];
+    const sisa = (hari in sisaPerHari) ? sisaPerHari[hari] : 0;
+    document.getElementById('sisa-num').textContent = sisa;
   })();
 </script>
 </body>

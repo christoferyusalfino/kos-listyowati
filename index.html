@@ -43,14 +43,13 @@
     /* ─── NAVBAR ─── */
     .navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      height: 500px; display: flex; align-items: center;
+      height: 78px; display: flex; align-items: center;
       justify-content: space-between; padding: 0 56px;
       background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       box-shadow: 0 2px 16px rgba(11,28,61,0.07);
     }
-    /* Logo 200% dari ukuran natural PNG (234px) = 468px */
-    .logo img { height: 468px; display: block; }
+    .logo img { width: 254px; height: 46px; object-fit: contain; object-position: left center; display: block; }
     .nav-links { list-style: none; display: flex; align-items: center; gap: 40px; }
     .nav-links a {
       text-decoration: none; color: var(--dark);
@@ -70,7 +69,7 @@
     /* ─── HERO (150%) ─── */
     .hero {
       max-width: 1300px; margin: 0 auto;
-      padding: 530px 56px 100px;
+      padding: 108px 56px 100px;
       display: grid; grid-template-columns: 1fr 1fr;
       align-items: center; gap: 80px; min-height: 100vh;
     }
@@ -216,21 +215,21 @@
 
     /* ─── RESPONSIVE MOBILE ─── */
     @media (max-width: 1024px) {
-      .hero { gap: 48px; padding: 120px 40px 80px; }
+      .hero { gap: 48px; padding: 98px 40px 80px; }
       .hero-title { font-size: 60px; }
       .sec-heading { font-size: 44px; }
       .sec-wrap { padding: 0 40px; }
     }
 
     @media (max-width: 900px) {
-      .navbar { padding: 0 20px; height: 110px; }
-      .logo img { height: 90px; }
+      .navbar { padding: 0 20px; height: 64px; }
+      .logo img { width: 180px; height: 33px; }
       .nav-links { display: none; }
       .nav-cta { font-size: 13px; padding: 10px 16px; }
 
       .hero {
         grid-template-columns: 1fr; min-height: auto;
-        padding: 130px 20px 60px; gap: 40px;
+        padding: 84px 20px 60px; gap: 40px;
       }
       .hero-title { font-size: 42px; letter-spacing: -1px; }
       .hero-desc { font-size: 18px; max-width: 100%; }

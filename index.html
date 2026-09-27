@@ -222,7 +222,7 @@
 
     @media (max-width: 900px) {
       .navbar { padding: 0 20px; height: 64px; }
-      .logo img { width: 180px; height: 33px; }
+      .logo img { height: 40px; width: auto; }
       .nav-links { display: none; }
       .nav-cta { display: none; }
 
@@ -315,7 +315,7 @@
         <div class="stat-lbl">Jumlah Kamar Tersedia</div>
       </div>
       <div class="stat-block">
-        <div class="stat-num sisa" id="sisa-num">0</div>
+        <div class="stat-num sisa" id="sisa-num">2</div>
         <div class="stat-lbl">Sisa Kamar Hari Ini<span class="stat-date" id="tanggal-live"></span></div>
       </div>
     </div>
@@ -414,6 +414,7 @@
     ──────────────────────────────────────────────────────────────────── */
     const sisaPerHari = {
       '2026-06-17': 0,
+      '2026-09-27': 2,
       /* '2026-06-18': 2, */
       /* '2026-06-19': 1, */
     };
